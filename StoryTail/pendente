@@ -1,0 +1,326 @@
+ \DB::table('books')->insert([
+            [
+                'title' => 'A Squash and a Squeeze', /*- but when she asks a wise old man for help, he suggests a rather strange solution to her problems.*/
+                'summary' => 'A story of an anxious little old lady, whose house is just too small',
+                'cover' => '',
+                'slug' => '',
+                'author' => 'Julia Donaldson',
+                'illustrator' => 'Axel Scheffler',
+                'age_group_id' => '4',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'title' => 'Monkey Puzzle',   /*However, Butterfly cannot seem to understand that Monkey and his mum look alike, so attempts to reunite Monkey with an elephant, a parrot and even a bat!*/
+                'summary' => 'Monkey is lost in the jungle, so he asks Butterfly to help him find his mum.',
+                'cover' => '',
+                'slug' => '',
+                'author' => 'Julia Donaldson',
+                'illustrator' => 'Axel Scheffler',
+                'age_group_id' => '5',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'title' => 'The Colour Monster',/*He is red, green, yellow, blue and black, all at the same time. It`s making him very confused and he doesn`t know why*/
+                'summary' => 'The little colour monster is having a hard time, as his feelings are all jumbled up.',
+                'cover' => '',
+                'slug' => '',
+                'author' => 'Anna Llenas',
+                'illustrator' => '',
+                'age_group_id' => '2',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'title' => 'The Gruffalo',
+                'summary' => 'A little mouse walks through the woods and encounters a fox, an owl and a snake..',
+                'cover' => '',
+                'slug' => '',
+                'author' => 'Julia Donaldson',
+                'illustrator' => 'Axel Scheffler',
+                'age_group_id' => '1',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
+        ]);
+
+
+
+
+
+        -----------------
+
+
+
+
+/*------Toasts Messages---------*/
+#toast-container {
+    position: relative;
+    top: 30%;
+
+
+
+
+}
+
+.toast-message {
+
+    font-size: 20px;
+
+
+}
+
+
+#toast-container > .toast-success {
+    background-image: none;
+    background-color: #38C172;
+    color: white;
+
+}
+
+
+
+#toast-container > .toast-error {
+    background-image: none;
+    background-color: #df4759;
+    color: white;
+
+}
+
+/*------End Toasts Messages---------*/
+
+/*-------Tooltips------------------*/
+
+.editBookButton {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipEditBook {
+    visibility: hidden;
+    width: 80px;
+    background-color: #5bc0de;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    right: 110%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.editBookButton .toolTipEditBook::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #5bc0de
+}
+
+.editBookButton:hover .toolTipEditBook {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*--------------*/
+
+.deleteBookButton {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipDeleteBook {
+    visibility: hidden;
+    width: 90px;
+    background-color: #E3342F;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    left: 120%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.deleteBookButton .toolTipDeleteBook::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #E3342F transparent transparent;
+}
+
+.deleteBookButton:hover .toolTipDeleteBook {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*------------*/
+
+.studentButton {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipStudent{
+    visibility: hidden;
+    width: 60px;
+    background-color: #5bc0de;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.studentButton .toolTipStudent::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #5bc0de transparent transparent transparent;
+}
+
+.studentButton:hover .toolTipStudent {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*--------------*/
+
+.adminButton {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipAdmin{
+    visibility: hidden;
+    width: 60px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.adminButton .toolTipAdmin::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.adminButton:hover .toolTipAdmin {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*-------End of Tooltips------------------*/
+
+/*Custom Button*/
+
+
+
+---------Activities---------
+
+
+\DB::table('activities')->insert([
+            [
+                'activity_type_id' => '1',
+                'description' => 'Think about the sounds that each animal makes... croak, squawk, hiss. Can you think of any others?',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'activity_type_id' => '6',
+                'description' => 'Look on the websites of local zoos. Do they look after any of the animals found in the story?',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'activity_type_id' => '2',
+                'description' => 'Draw / paint a jungle scene using the illustrations for inspiration.',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
+            [
+                'activity_type_id' => '4',
+                'description' => 'How many animals lived in the house at different points in the story? How many eyes did they all have? How many legs? How many tails? ',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'activity_type_id' => '2',
+                'description' => 'Can you mix colours? What new colours can you make?',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
+            [
+                'activity_type_id' => '1',
+                'description' => 'Write a sequel. What adventures might the Colour Monster have next?',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
+            [
+                'activity_type_id' => '5',
+                'description' => 'Write a report about an imaginary creature. What does it eat? Where does it live? How is it adapted to live in that place?',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
+            [
+                'activity_type_id' => '2',
+                'description' => 'Draw or paint your own imaginary creature.',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
+
+        ]);
+
+        foreach (Book::all() as $book){
+            $activity = Activity::inRandomOrder()->take(rand(1,4))->pluck('id');
+            $book->activities()->attach($activity);
+
+
+        }
