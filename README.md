@@ -22,5 +22,22 @@ HTML, CSS, JavaScript, Laravel, MySql/PostgreSQL
 
 Server
 StoryTail
+<br>
 storytailcolegiomaia@gmail.com
 storytail2022
+<br>
+composer install
+<br>
+npm install
+<br>
+npm i bootstrap-icons
+<br>
+npm run dev
+<br>
+php artisan storage:link
+<br>
+php artisan migrate:fresh
+<br>
+php artisan migrate:fresh --seed
+<br>
+php artisan serve
