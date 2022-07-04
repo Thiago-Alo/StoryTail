@@ -3,9 +3,11 @@
 Final work of the Web & Mobile Develop course at Cesae, with a real client - finish in 04/07/2022
 
 Front - Thiago Alô
+<br>
 Back - Ivo Carvalho
+<br>
 DB - Manuel  Miranda
-
+<br>
 HTML, CSS, JavaScript, Laravel, MySql/PostgreSQL
 
 ![imagem](https://user-images.githubusercontent.com/78623134/177200494-63873eda-fc57-4e59-af68-522968cc160a.png)
