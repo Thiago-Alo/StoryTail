@@ -1,0 +1,1452 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;700&display=swap');
+
+@font-face {
+    font-family: "Cormorant Infant Custom";
+    src: url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;700&display=swap');
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Infant', serif;
+}
+/*.navbarStory BAR*/
+.navbarStory{
+    background-image: url("../storage/images/website/imgnav.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: auto;
+    padding: 10px 40px 10px 70px;
+    border: 1px solid #000;
+    border-left:none;
+    border-right:none;
+    box-shadow: 5px 5px 15px rgb(58, 54, 54);
+}
+/*ALIGN .navbarStory*/
+.navbarStory ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.navbarStory ul li.logo{
+    flex:1;
+    font-size:60px;
+    font-weight: 700;
+}
+.navbarStory ul div.items-nav{
+    display: inline-flex;
+    padding:0 25px;
+}
+
+
+/*END ALIGN NAV*/
+/*WORDS*/
+
+
+.navbarStory ul li a{
+    display:block;
+    text-decoration: none;
+    font-size:27px;
+    padding:0 8px;
+    font-weight: 600;
+    color:#909039;
+    background: rgba(10, 10, 10, 0.7);
+    margin:2px;
+    border-radius:15px;
+    overflow: hidden;
+}
+
+ul li .menu-word .f-word,
+ul li .menu-word .s-word{
+
+    display: inline-block;
+    position: relative;
+    transition: transform 0.8s;
+
+}
+ul li .menu-word .s-word{
+    margin-left: -6px;
+}
+ul li .menu-word .f-word:before,
+ul li .menu-word .s-word:before{
+    position: absolute;
+    content: attr(data-hover);
+}
+
+ul li .menu-word .f-word:before{
+    color:#E1700F;
+    top:110%;
+}
+ul li .menu-word .s-word:before{
+    color:#E1700F;
+    bottom:110%;
+}
+a:hover .f-word{
+    transform: translate3d(0, -110%, 0);
+}
+a:hover .s-word{
+    transform: translate3d(0, 110%, 0);
+}
+/*END WORDS AND NAV BAR*/
+/*SEARCH BAR AND BUTTON*/
+.navbarStory ul .search-icon{
+    height:40px;
+    width: 240px;
+    display: flex;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+.navbarStory ul .search-icon input{
+    height: 100%;
+    width: 200px;
+    border:none;
+    border-radius: 5px 0 0 5px;
+    outline:none;
+    padding:0 10px;
+    color: #000;
+    font-size: 16px;
+}
+.navbarStory ul .search-icon span{
+    height: 100%;
+    width:40px;
+    line-height: 40px;
+    text-align: center;
+    background: #000;
+    border: 1px solid #cccccc;
+    border-radius: 0 5px 5px 0;
+    cursor:pointer;
+    background-image: url('../storage/images/website/raposa3-removebg-preview.png');
+    background-size: cover;
+}
+.navbarStory ul .search-icon:hover span{
+    background-image: url('../storage/images/website/raposa4-removebg-preview.png');
+    background-size: cover;
+}
+/*END SEARCH BAR AND BUTTON*/
+/*MENU HAMBURGUER*/
+nav ul li.btn{
+    font-size: 30px;
+    color:#f2f2f2;
+    flex:1;
+    padding:0 40px;
+    display: none;
+}
+nav ul li.btn span{
+    height:42px;
+    width:42px;
+    line-height: 42px;
+    border: 2px solid #f2f2f2;
+    text-align: center;
+    border-radius: 5px;
+    cursor:pointer;
+}
+nav ul li.btn:hover span.show-navmenu:before{
+    content:'😉';
+}
+/*END MENU HAMBURGUER*/
+
+/*GALLERY*/
+.wrapper{
+    margin-top:50px;
+}
+
+.wrapper .container-gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-gallery img{
+    margin-left: 6%;
+}
+.container-gallery .items{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.container-gallery .items .item{
+    padding:8px 25px;
+    font-size:18px;
+    margin-left: 2px;
+    margin-bottom: 5px;
+    margin-right: 2px;
+    font-weight: 500;
+    color: #E1700F;
+    border: 2px solid #E1700F;
+    border-radius:50px;
+    cursor:pointer;
+    transition: all 0.5s ease;;
+}
+.container-gallery .items .active,
+.container-gallery .items .item:hover{
+    color: #fff;
+    background: #909039;
+}
+/*--------------*/
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+/*CARDS*/
+
+
+.gallery .box-card{
+    width:calc(100% / 6);
+    margin: 7px;
+    height:350px;
+    width:270px;
+    position:relative;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin-top:10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.gallery .box-card.hide{
+    display: none;
+}
+.gallery .box-card.show{
+    animation: animateGallery 0.4s ease;
+}
+
+/*END CARDS*/
+/*CARDS*/
+
+/*Transition open book*/
+.box-card .card{
+    height:100%;
+    width:100%;
+    position:absolute;
+    background: rgba(70, 122, 143, 0.9);
+    border-radius: 10px;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition:  0.3s cubic-bezier(0.4,0.2,0.2,1);
+}
+.box-card:hover > .front-face{
+    transform: rotateY(-180deg);
+}
+.box-card .card embed{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+
+}
+
+.coverBook{
+    object-fit: cover;
+    border-radius: 10px;
+    height:100%;
+    width: 100%;
+}
+
+.box-card .card img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.box-card .back-face{
+    position: relative;
+    transform: rotateY(180deg);
+    display: none;
+}
+.box-card:hover > .back-face{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 2s linear;
+    transform: rotateY(0deg);
+}
+.box-card .back-face .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
+
+/*CARD - TAMANHO TEXTOS */
+.back-face .info .title{
+    max-height: 150px;
+    max-width: 260px;
+    font-size: 25px;
+    font-weight: bold;
+    color:black;
+    overflow: hidden;
+}
+
+.back-face .info .book-author{
+    font-size:16px;
+    font-weight: bold;
+    color:black;
+    letter-spacing: 1px;
+    border-bottom:2px solid #E1700F;
+    max-width: 260px;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+
+.back-face .info .description{
+    margin-top:-5px;
+    margin-bottom:1px;
+}
+.back-face .info .description a{
+    text-decoration: none;
+    color:white;
+    font-size:17px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.back-face .info .description a:hover{
+    border-bottom: 2px solid #E1700f;
+    letter-spacing: 4px;
+}
+
+
+/*BUTTON CARDS*/
+.readme{
+    text-decoration: none;
+    position: relative;
+    background:none;
+    color:crimson;
+    font-weight: bold;
+    padding:10px 20px;
+    letter-spacing: 2px;
+    transition: .5s linear;
+    transition-delay: 0s;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top:1px;
+    margin-bottom:2px;
+}
+
+
+
+.readme:hover{
+    background:crimson;
+    color:white;
+    transition: 1s linear ;
+    transition-delay: 1s;
+}
+.readme span{
+    display: block;
+    position: absolute;
+}
+.readme span:nth-child(1){
+    top:0;
+    left:-100%;
+    height:2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent , crimson );
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+.readme:hover span:nth-child(1){
+    left:100%;
+    transition: 1s;
+}
+.readme span:nth-child(2){
+    top:-100%;
+    right:0;
+    height:100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent , crimson );
+    transition: 0.5s;
+    transition-delay: 0.75s;
+}
+.readme:hover span:nth-child(2){
+    top:100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.readme span:nth-child(3){
+    bottom:0;
+    right:-100%;
+    height:2px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent , crimson );
+    transition: 0.7s;
+    transition-delay: 0.25s;
+}
+.readme:hover span:nth-child(3){
+    right:100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.readme span:nth-child(4){
+    top:100%;
+    left:0;
+    height:100%;
+    width: 2px;
+    background: linear-gradient(360deg, transparent , crimson );
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.readme:hover span:nth-child(4){
+    top:-100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+/*RATING STARS*/
+.star-radio input{
+    display: none;
+}
+.star-radio label{
+    font-size: 30px;
+    color: #444;
+    padding: 5px;
+    float: right;
+    transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label
+{
+    color: #fd4;
+}
+input:checked ~ label{
+    color: #fd4;
+}
+input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 15px;
+}
+/*END CARDS*/
+/*MODAL*/
+.modal-container{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-container.ativo {
+    display: flex;
+}
+.modal{
+    background: white;
+    width: 40%;
+    height:auto;
+    padding: 40px;
+    border: 10px solid;
+    border-image: linear-gradient(to right,#909039, #E95A0C, #909039) 1;
+    box-shadow: 0 0 15px 10px black;
+    position: relative;
+    z-index: 2500;
+    display: block;
+}
+.modal-title{
+    font-size:22px;
+    font-weight: bold;
+    width: 100%;
+    overflow: hidden;
+}
+.modal-book-author{
+    overflow: hidden;
+    border-bottom: 2px solid #E95A0C;
+    font-size: 16px;
+}
+.text-description{
+    width: 100%;
+    max-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size:17px;
+}
+.fechar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #909039;
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    background: black;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,1);
+    font-size: 20px;
+    font-weight: bold;
+    color: #E95A0C;
+    cursor: pointer;
+}
+/*END MODAL*/
+
+@media screen and (max-width: 1052px) {
+    .navbarStory{
+        padding: 10px 40px 10px 0px;
+        background-image: url("../storage/images/website/imgnav1.jpg");
+    }
+    nav ul li.logo{
+        display: none;
+    }
+    nav ul div.items-nav{
+        flex:4;
+    }
+}
+@media screen and (max-width: 1000px){
+    nav ul li.btn{
+        display: block;
+    }
+    nav{
+        display: block;
+        z-index:15;
+        padding: 9px 40px 9px 0;
+    }
+    nav ul div.items-nav{
+        z-index:2;
+        position: absolute;
+        top:-220px;
+        background: transparent;
+        width: 100%;
+        right:0;
+        display: inline-block;
+    }
+    nav ul div.items-nav.show-navmenu{
+        top:80px;
+    }
+    nav ul div.items-nav li{
+        line-height: 30px;
+    }
+    .navbarStory ul li a{
+        font-size:27px;
+        padding:4px;
+    }
+    .modal-container{
+        max-height: 100%;
+        width: 100%;
+    }
+    .modal{
+        width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .container-gallery .items .item{
+        padding: 7px 15px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .container-gallery .items img{
+        display: none;
+    }
+}
+@media screen and (max-width: 600px){
+    .container-gallery .items{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .container-gallery .items .item{
+        margin: 5px;
+    }
+    .container-gallery .items img{
+        display: none;
+    }
+    .container-gallery img{
+        margin-left: 0%;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+
+    nav ul div.items-nav{
+        z-index:2;
+        position: absolute;
+        top:-220px;
+        background: transparent;
+        width: 100%;
+        right:0;
+        display: flex;
+    }
+    nav ul div.items-nav.show-navmenu{
+        top:80px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul div.items-nav li{
+        line-height: 30px;
+    }
+    .navbarStory ul li a{
+        font-size:27px;
+        padding:4px;
+    }
+}
+
+
+/*PAGE CONTACT*/
+/*PAGE CONTACT*/
+.contacto{
+    background-image: url('../storage/images/login/body2.png');
+    background-repeat: repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding-top: 40px;
+}
+.container-contacto{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:5px;
+    position: relative;
+    margin-top:5px;
+}
+.container-contacto img{
+    height:600px;
+    background-color: transparent;
+    border:3px solid black;
+    border-radius: 10px;
+    box-shadow: -25px 25px 5px black;
+    opacity: 0.7;
+}
+.contacto-body{
+    position: absolute;
+    top:50px;
+    height:500px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+    margin-left:80px;
+}
+.contacto-body span{
+    font-size: 25px;
+    font-weight: 900;
+}
+.contacto-body input{
+    margin: 0px 0 10px 0;
+    width: 90%;
+}
+.container-contacto .contacto-body textarea{
+    margin-bottom:10px;
+}
+.container-contacto .contacto-body button{
+    color:#fff;
+    background: #E95A0C;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    font-size:22px;
+    font-weight: 600;
+    transition: all 1s ease;
+    width: 150px;
+    margin: 15px 0px 50px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-contacto .contacto-body button:hover{
+    background: rgb(107, 103, 35);
+    width: 100%;
+}
+
+/*Search Button Admin Area*/
+
+.SearchBox ul .search-icon{
+    height:40px;
+    width: 330px;
+    display: flex;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+.SearchBox ul .search-icon input{
+    height: 100%;
+    width: 280px;
+    border: 0.5px solid #cccccc ;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    outline:none;
+    padding:0 10px;
+    color: #000;
+    font-size: 16px;
+}
+.SearchBox ul .search-icon span{
+    height: 100%;
+    width:40px;
+    line-height: 40px;
+    text-align: center;
+    background: #000;
+    border: 0.5px solid #cccccc;
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+    cursor:pointer;
+    background-image: url('../storage/images/website/raposa3-removebg-preview.png');
+    background-size: cover;
+}
+.SearchBox ul .search-icon:hover span{
+    background-image: url('../storage/images/website/raposa4-removebg-preview.png');
+    background-size: cover;
+}
+
+.SearchBox ul .search-icon .btn{
+
+
+    width: 100%;
+    height: 100%;
+}
+
+.SearchBox ul .search-icon .btn:focus{
+    outline: none;
+    box-shadow: none;
+
+}
+
+.SearchBoxHome .btn{
+
+
+    width: 100%;
+    height: 100%;
+}
+
+.SearchBoxHome .btn:focus{
+    outline: none;
+    box-shadow: none;
+
+}
+
+
+
+/*------Toasts Messages---------*/
+#toast-container {
+    position: relative;
+    top: 30%;
+
+
+
+
+}
+
+.toast-message {
+
+    font-size: 20px;
+
+
+}
+
+
+#toast-container > .toast-success {
+    background-image: none;
+    background-color: #38C172;
+    color: white;
+
+}
+
+
+
+#toast-container > .toast-error {
+    background-image: none;
+    background-color: #df4759;
+    color: white;
+
+}
+
+/*------End Toasts Messages---------*/
+
+/*-------Tooltips------------------*/
+
+.editBookButton {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipEditBook {
+    visibility: hidden;
+    width: 60px;
+    background-color: #5bc0de;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.editBookButton .toolTipEditBook::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #5bc0de transparent transparent transparent;
+}
+
+.editBookButton:hover .toolTipEditBook {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*--------------*/
+
+.showBookButton {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipShowBook {
+    visibility: hidden;
+    width: 80px;
+    background-color: #5cb85c;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    right: 120%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.showBookButton .toolTipShowBook::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #5cb85c
+}
+
+.showBookButton:hover .toolTipShowBook {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*--------------*/
+
+.deleteBookButton {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipDeleteBook {
+    visibility: hidden;
+    width: 90px;
+    background-color: #E3342F;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    left: 120%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.deleteBookButton .toolTipDeleteBook::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #E3342F transparent transparent;
+}
+
+.deleteBookButton:hover .toolTipDeleteBook {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*------------*/
+
+.studentButton {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipStudent{
+    visibility: hidden;
+    width: 60px;
+    background-color: #5bc0de;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.studentButton .toolTipStudent::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #5bc0de transparent transparent transparent;
+}
+
+.studentButton:hover .toolTipStudent {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*--------------*/
+
+.adminButton {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipAdmin{
+    visibility: hidden;
+    width: 60px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.adminButton .toolTipAdmin::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.adminButton:hover .toolTipAdmin {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*-------End of Tooltips------------------*/
+
+/*NEW BOOK FORM*/
+
+.buttonSubmitFormat {
+    color:#fff;
+    background: #E95A0C;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    font-size:22px;
+    font-weight: 600;
+    transition: all 1s ease;
+    width: 150px;
+}
+.buttonSubmitFormat:hover{
+    background: rgb(107, 103, 35);
+    width: 300px;
+}
+
+/*Contact Boxes*/
+
+.labelBoxFormNewBook{
+
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.inputBoxFormNewBook{
+
+    font-size: 18px;
+
+}
+
+.containerFullHeight{
+
+    height: 100vh;
+    display: flex;
+
+
+}
+
+.customBoxShadow{
+    box-shadow: 2px 5px 22px 0px #000000;
+    border-radius: 20px;
+
+
+}
+
+/*-------Cover Poster - Edit Book*/
+
+/*--------------*/
+.coverBookParentClass{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+/*CARDS*/
+.coverBookParentClass .coverBookBoxCard{
+    margin: 7px;
+    height:195px;
+    width:150px;
+    position:relative;
+    transform-style: preserve-3d;
+    perspective: 500px;
+
+}
+
+.coverBook{
+    object-fit: cover;
+    border-radius: 10px;
+    height:100%;
+    width: 100%;
+}
+
+/*--------------*/
+
+/*SelectPicker*/
+
+.filter-option {
+    font-size: 18px;
+
+    font-family: "Cormorant Infant Custom";
+
+
+
+}
+
+/*Activity Type pages*/
+
+@media screen and (max-width: 720px){
+    .container-custom-size {
+        width:90%; !important;
+
+    }
+}
+
+@media screen and (min-width: 720px){
+    .container-custom-size {
+        width:50%; !important;
+
+    }
+}
+
+
+
+@media screen and (max-width: 960px){
+    .container-custom-size-min {
+        width:70%; !important;
+
+    }
+}
+
+
+
+@media screen and (min-width: 960px){
+    .container-custom-size-min {
+        width:40%; !important;
+
+    }
+}
+
+
+/*Tables Home Admin*/
+
+.editTableAdminButton {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipEditTableAdmin {
+    visibility: hidden;
+    width: 80px;
+    background-color: #5bc0de;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    right: 120%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.editTableAdminButton .toolTipEditTableAdmin::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #5bc0de;
+
+}
+
+.editTableAdminButton:hover .toolTipEditTableAdmin {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*--------------*/
+
+/*--------------*/
+
+.deleteTableAdminButton {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipDeleteTableAdmin {
+    visibility: hidden;
+    width: 90px;
+    background-color: #E3342F;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    left: 120%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.deleteTableAdminButton .toolTipDeleteTableAdmin::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #E3342F transparent transparent;
+}
+
+.deleteTableAdminButton:hover .toolTipDeleteTableAdmin {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.tableTitleFormat{
+caption-side: top;
+font-size: 20px;
+padding: 5px;
+background-color: #e5f2fc;
+
+}
+
+.customBoxShadowAdminHome{
+    box-shadow: 2px 4px 17px 4px rgba(0,0,0,0.36);
+    /*box-shadow: 2px 5px 10px 0px #000000;*/
+    border-radius: 20px;
+
+
+}
+
+
+.coverBookParentClassAdmin{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+/*CARDS*/
+.coverBookParentClassAdmin .coverBookBoxCardAdmin{
+    margin-top: 20px;
+
+    height:310px;
+    width:240px;
+    position:relative;
+    transform-style: preserve-3d;
+    perspective: 500px;
+
+}
+
+.coverBookAdmin{
+    object-fit: cover;
+    border-radius: 10px;
+    height:100%;
+    width: 100%;
+}
+
+.iconsCarouselAdmin{
+
+    font-size: 2.5rem;
+    color: #E95A0C;
+    opacity: 0.75;
+
+
+}
+
+.iconsCarouselAdmin:hover{
+
+ color: #6B0103;
+    opacity: 0.75;
+
+}
+
+.buttonCarouselAdmin{
+
+    background-color: #E95A0C;
+
+    opacity: 0.75;
+    width: 100px;
+    border-color: #E95A0C;
+
+}
+.buttonCarouselAdmin:hover{
+
+    background-color: #6B0103;
+    opacity: 0.75;
+
+}
+
+
+
+.iconActivityThemeParentClass{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+/*CARDS*/
+.iconActivityThemeParentClass .iconActivityThemeBoxCard{
+    margin-top: 20px;
+
+    height:150px;
+    width:150px;
+    position:relative;
+    transform-style: preserve-3d;
+    perspective: 500px;
+
+}
+
+.iconActivityTheme{
+    object-fit: cover;
+    border-radius: 10px;
+    height:100%;
+    width: 100%;
+}
+
+/*Button My Account*/
+
+.buttonEditMyAccount {
+    color:#fff;
+    background: #E95A0C;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    font-size:22px;
+    font-weight: 600;
+    transition: all 1s ease;
+    width: 150px;
+}
+.buttonEditMyAccount:hover{
+    background: rgb(107, 103, 35);
+
+}
+.buttonGoBackMyAccount  {
+    color:#fff;
+    background: #E95A0C;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 1s ease;
+    border-color:  black ;
+    border-width: 2px;
+
+
+}
+
+.buttonGoBackMyAccount:hover{
+    background-color: rgb(107, 103, 35);
+
+
+}
+
+#buttonGoBack:focus{
+
+    outline: none; !important;
+    box-shadow: none; !important;
+
+}
+
+
+/*Button Readme modal*/
+.readme_modal{
+    text-decoration: none;
+    position: relative;
+    background:none;
+    color:crimson;
+    font-weight: bold;
+    padding:10px 20px;
+    letter-spacing: 2px;
+    transition: .5s linear;
+    transition-delay: 0s;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top:1px;
+    margin-bottom:2px;
+}
+
+
+.readme_modal:hover{
+    background:crimson;
+    color:white;
+    transition: 1s linear ;
+}
+
+
+/*Botões Favoritos*/
+.buttonFavouriteYes{
+
+    color: #E95A0C;
+
+
+}
+
+.buttonFavouriteNo:hover{
+
+    color: #E95A0C;
+    transition: 0.8s;
+}
+
+.buttonFavouriteYes:hover{
+
+    color: inherit;
+    transition: 0.8s;
+}
+
+#buttonFavourite:focus{
+
+    box-shadow: none!important;
+    outline: none !important;
+}
+
+.buttonAge:focus{
+
+    box-shadow: none!important;
+    outline: none !important;
+}
+
+.userFavouriteButton:focus{
+
+    box-shadow: none!important;
+    outline: none !important;
+}
+
+
+/*Cover MyAccount*/
+
+.coverBookParentClassMyAccount{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+/*CARDS*/
+.coverBookParentClassMyAccount .coverBookBoxCardMyAccount{
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height:195px;
+    width:150px;
+    position:relative;
+    transform-style: preserve-3d;
+    perspective: 500px;
+
+}
+
+.coverBookMyAccount{
+    object-fit: cover;
+    border-radius: 10px;
+    height:85%;
+    width: 85%;
+}
+
+
+.activityIcon {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTipActivity  {
+    visibility: hidden;
+    width: 100px;
+    background-color: #E95A0C;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.activityIcon .toolTipActivity::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #E95A0C transparent transparent transparent;
+}
+
+.activityIcon:hover .toolTipActivity  {
+    visibility: visible;
+    opacity: 1;
+}

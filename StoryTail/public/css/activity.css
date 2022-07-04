@@ -1,0 +1,53 @@
+
+.last{
+    background: aliceblue;
+    padding: 40px;
+    border: 10px solid;
+    border-image: linear-gradient(to right,#909039, #E95A0C, #909039) 1;
+    box-shadow: 0 0 15px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+
+}
+.last-title{
+    font-size:100px;
+    font-weight: bold;
+    color: #E95A0C;
+    text-shadow: 0px 3px 2px black;
+}
+.last-title span{
+    color: #909039;
+    text-shadow: 0px 3px 2px black;
+}
+.last p{
+    overflow: hidden;
+    border-bottom: 2px solid #E95A0C;
+    font-size: 25px;
+}
+
+
+/*END CARDS*/
+/*BUTTON*/
+.btn{
+    color:#fff;
+    background: #E95A0C;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    font-size:22px;
+    font-weight: 600;
+    transition: all 1s ease;
+    width: 150px;
+    margin: 15px 0px 50px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.btn:hover{
+    background: rgb(255, 178, 102);
+    width: 200px;
+}

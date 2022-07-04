@@ -1,0 +1,404 @@
+/*Login*/
+/*
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.body-login{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-image: url('../storage/images/login/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size:cover ;
+}
+.container-login{
+    max-width: 850px;
+    width: 100%;
+    background: #fff;
+    padding: 40px 30px;
+    box-shadow:10px 10px 10px rgba(0,0,0,1);
+    position: relative;
+    perspective: 2700px;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+.container-login .cover{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left:50%;
+    z-index: 20;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style:preserve-3d;
+    backface-visibility: hidden;
+}
+!*FRONT*!
+.container-login .cover::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #7d2da8;
+    opacity: 0.2;
+    z-index: 30;
+    backface-visibility: hidden;
+}
+.container-login  .cover::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 30;
+    transform:rotateY(180deg);
+    backface-visibility: hidden;
+    background-image:url('../storage/images/login/giphy.gif') ;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.container-login #flip:checked ~ .cover{
+    transform: rotateY(-180deg);
+
+}
+.container-login .cover img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index:10;
+}
+
+.container-login .form-style{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+.container-login .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-content .login-form,
+.form-content .signup-form{
+    width: calc(100% / 2 - 25px);
+}
+.form-style .form-content .title{
+    position: relative;
+    font-size:24px;
+    font-weight: 500;
+    color:#333;
+}
+.form-style .form-content .title:before{
+    content:'';
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    background: #E95A0C;
+    bottom:0;
+}
+.form-style .signup-form .title:before{
+    width: 18px;
+}
+
+.form-style .form-content .input-boxes{
+    margin-top: 30px;
+}
+.form-style .form-content .input-box{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin:10px 0;
+    position: relative;
+}
+.form-content .input-box input{
+    height: 100%;
+    width: 100%;
+    outline:none;
+    border:none;
+    padding: 0 30px;
+    font-size:17px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    transition: all 1s ease;
+}
+.form-content .input-box i{
+    position: absolute;
+    color: #000000;
+    font-size:17px;
+}
+.form-content .input-box input:focus,
+.form-content .input-box input:focus:valid{
+    border-color: #E95A0C;
+}
+.form-style .form-content .button input{
+    color:#fff;
+    background: #E95A0C;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    font-size:20px;
+}
+.form-style .form-content .button input:hover{
+    background: rgb(107, 103, 35);
+}
+
+.form-style .form-content .login-text,
+.form-style .form-content .sign-up-text{
+    text-align: center;
+    margin-top: 25px;
+}
+.container-login #flip{
+    display: none;
+}
+.login-checkbox{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login-checkbox input{
+    margin-right:5px;
+}
+
+
+
+
+@media (max-width: 600px){
+    .container-login .cover{
+        display:none;
+    }
+    .form-content .login-form,
+    .form-content .signup-form{
+        width: 100%;
+    }
+    .form-content .signup-form{
+        display: none;
+    }
+    .container-login #flip:checked ~ .form-style .signup-form{
+        display: block;
+    }
+    .container-login #flip:checked ~ .form-style .login-form{
+        display: none;
+    }
+}
+
+.form-control:focus {
+    color: inherit;
+    background-color: inherit;
+    border-color: inherit;
+    outline: inherit;
+    box-shadow: inherit;
+}
+*/
+
+/*Login*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.body-login{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    /*ALTERA COR DO LOGUIN*/
+   /* background:#974316;*/
+    background: rgb(151, 67, 22,0.3)
+
+    /*background: #E1700F;*/
+}
+.container-login{
+    max-width: 850px;
+    width: 100%;
+    background: #fff;
+    padding: 40px 30px;
+    /*sombra do login*/
+    box-shadow:15px 15px 15px rgba(0,0,0,1), -15px -15px 15px rgba(0,0,0,1);
+    position: relative;
+    perspective: 2700px;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+.container-login .cover{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left:50%;
+    z-index: 20;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style:preserve-3d;
+    backface-visibility: hidden;
+}
+/*FRONT*/
+.container-login .cover::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #7d2da8;
+    opacity: 0.2;
+    z-index: 30;
+    backface-visibility: hidden;
+}
+.container-login  .cover::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 30;
+    transform:rotateY(180deg);
+    backface-visibility: hidden;
+    background-image:url('../storage/images/login/giphy.gif') ;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.container-login #flip:checked ~ .cover{
+    transform: rotateY(-180deg);
+
+}
+.container-login .cover img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index:10;
+}
+
+.container-login .form-style{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+.container-login .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-content .login-form,
+.form-content .signup-form{
+    width: calc(100% / 2 - 25px);
+}
+.form-style .form-content .title{
+    position: relative;
+    font-size:24px;
+    font-weight: 500;
+    color:#333;
+}
+.form-style .form-content .title:before{
+    content:'';
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    background: #E95A0C;
+    bottom:0;
+}
+.form-style .signup-form .title:before{
+    width: 18px;
+}
+
+.form-style .form-content .input-boxes{
+    margin-top: 30px;
+}
+.form-style .form-content .input-box{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin:10px 0;
+    position: relative;
+}
+.form-content .input-box input{
+    height: 100%;
+    width: 100%;
+    outline:none;
+    border:none;
+    padding: 0 30px;
+    font-size:17px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    transition: all 1s ease;
+}
+.form-content .input-box i{
+    position: absolute;
+    color: #000000;
+    font-size:17px;
+}
+.form-content .input-box input:focus,
+.form-content .input-box input:focus:valid{
+    border-color: #E95A0C;
+}
+.form-style .form-content .button input{
+    color:#fff;
+    background: #E95A0C;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    font-size:20px;
+}
+.form-style .form-content .button input:hover{
+    background: rgb(107, 103, 35);
+}
+
+.form-style .form-content .login-text,
+.form-style .form-content .sign-up-text{
+    text-align: center;
+    margin-top: 25px;
+}
+.container-login #flip{
+    display: none;
+}
+.login-checkbox{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login-checkbox input{
+    margin-right:5px;
+}
+
+
+
+
+@media (max-width: 600px){
+    .container-login .cover{
+        display:none;
+    }
+    .form-content .login-form,
+    .form-content .signup-form{
+        width: 100%;
+    }
+    .form-content .signup-form{
+        display: none;
+    }
+    .container-login #flip:checked ~ .form-style .signup-form{
+        display: block;
+    }
+    .container-login #flip:checked ~ .form-style .login-form{
+        display: none;
+    }
+}
+
+.form-control:focus {
+    color: inherit;
+    background-color: inherit;
+    border-color: inherit;
+    outline: inherit;
+    box-shadow: inherit;
+}
+

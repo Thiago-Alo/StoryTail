@@ -1,0 +1,31 @@
+.topbar{
+    background-color: rgb(221, 133, 50);
+    overflow:hidden;
+    text-align:center;
+    padding: 5px;
+}
+.topbar a{
+    float:right;
+    color:whitesmoke;
+    text-align:center;
+    padding: 26px;
+    text-decoration:none;
+    font-size:26px;
+}
+.sidebar{
+    background-color: #333;
+    color: white;
+    height:100%;
+}
+.sidebar a{
+    margin-left:10px;
+    display:block;
+    color:white;
+    padding-bottom:10px;
+    font-size: 30px;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}

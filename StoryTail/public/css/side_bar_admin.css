@@ -1,0 +1,95 @@
+#onMouseOverSideBar{
+    height: 100%;
+    width: 30px;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #E95A0C;
+    opacity: 0.75;
+    transition: 0.5s;
+
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #E95A0C;
+    opacity: 0.75;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+
+
+}
+#panelAdmin{
+
+    display: none;
+    transition: 0.5s;
+}
+
+
+
+.sidebar a {
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.5s;
+    opacity: 0.75;
+}
+
+.sidebar a:hover {
+   /* color: #f1f1f1;*/
+    color: rgb(107, 103, 35);
+}
+
+
+
+
+.pinMenuButton{
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.5s;
+    opacity: 0.75;
+    cursor: pointer;
+
+}
+
+.dropdown-container {
+    display: none;
+    padding-left: 20px;
+
+}
+
+.activeSideBar {
+    background-color: #6B0103;
+    color: white;
+    font-weight: bold;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+
